@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="row">
+        {% for recipe in recipes  %}
+            <div class="col-lg-3">
+                <h2>{{ recipe.title }}</h2>
+                <p>{{ recipe.description }}</p>
+                <small>Pour {{ recipe.servingNumber }} couverts</small>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
